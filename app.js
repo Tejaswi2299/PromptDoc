@@ -84,22 +84,11 @@ Use examples and highlight edge cases. Avoid marketing language.`;
   }
 }
 
-function escapeHtml(input) {
-  return input
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-}
-
 function renderOutput(text) {
   const el = document.getElementById('outputContent');
   el.innerHTML = '';
 
-  const safeText = escapeHtml(text);
-
-  const formatted = safeText
+  const formatted = text
     .replace(/^## (.+)$/gm, '<div class="md-h2">$1</div>')
     .replace(/^### (.+)$/gm, '<div class="md-h3">$1</div>')
     .replace(/^# (.+)$/gm, '<div class="md-h1">$1</div>')
