@@ -3,115 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PromptDoc — AI Documentation Generator</title>
+  <title>PromptDoc — Demo Ready AI Documentation Assistant</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
-  <!-- NAV -->
   <nav>
     <div class="logo">Prompt<span>Doc</span></div>
     <div class="nav-links">
-      <a href="#demo">Demo</a>
+      <a href="#demo">Live Demo</a>
       <a href="#how">How it Works</a>
-      <a href="https://github.com/YOUR_USERNAME/promptdoc" target="_blank" class="gh-btn">⭐ GitHub</a>
+      <a href="https://github.com/YOUR_USERNAME/promptdoc" target="_blank" rel="noopener" class="gh-btn">GitHub Repo</a>
     </div>
   </nav>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-bg">
       <div class="grid-lines"></div>
       <div class="blob blob1"></div>
       <div class="blob blob2"></div>
     </div>
+
     <div class="hero-content">
-      <div class="badge">🏆 DFW AI Hackathon 2025</div>
-      <h1>Stop Writing Docs.<br/><span class="accent">Ship Them.</span></h1>
-      <p class="hero-sub">Paste your code or describe your internal tool. PromptDoc's AI agent generates a complete README, API reference, and onboarding guide — in seconds. No backend. No cost. Runs entirely in your browser.</p>
+      <div class="badge">Open-source • Browser-first • Demo-ready</div>
+      <h1>Generate clean technical docs<br/><span class="accent">from code in minutes.</span></h1>
+      <p class="hero-sub">PromptDoc turns raw code snippets and tool descriptions into practical markdown documentation you can publish directly to GitHub.</p>
       <div class="hero-cta">
-        <a href="#demo" class="btn-primary">Try It Live →</a>
-        <a href="https://github.com/YOUR_USERNAME/promptdoc" class="btn-ghost">View Source</a>
+        <a href="#demo" class="btn-primary">Launch Demo</a>
+        <a href="https://github.com/YOUR_USERNAME/promptdoc" class="btn-ghost" target="_blank" rel="noopener">View on GitHub</a>
       </div>
       <div class="hero-stats">
-        <div class="stat"><strong>0</strong> Backend servers</div>
-        <div class="stat"><strong>100%</strong> Client-side</div>
-        <div class="stat"><strong>∞</strong> Teams helped</div>
+        <div class="stat"><strong>Fast</strong> draft docs instantly</div>
+        <div class="stat"><strong>Clean</strong> markdown output</div>
+        <div class="stat"><strong>Simple</strong> single-page app</div>
       </div>
     </div>
+
     <div class="hero-visual">
       <div class="terminal-mock">
         <div class="terminal-bar">
           <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-          <span class="terminal-title">promptdoc — output.md</span>
+          <span class="terminal-title">README.md Preview</span>
         </div>
         <div class="terminal-body">
-          <div class="t-line comment"># <span class="hl">UserAuthService</span></div>
-          <div class="t-line"><br/></div>
+          <div class="t-line comment"># PaymentService</div>
           <div class="t-line comment">## Overview</div>
-          <div class="t-line">Handles JWT-based authentication for</div>
-          <div class="t-line">internal microservices. Supports OAuth2</div>
-          <div class="t-line">and API key fallback strategies.</div>
-          <div class="t-line"><br/></div>
+          <div class="t-line">Handles payment validation and provider routing.</div>
           <div class="t-line comment">## Usage</div>
-          <div class="t-line code">```javascript</div>
-          <div class="t-line code">const auth = <span class="hl">new UserAuthService</span>(config);</div>
-          <div class="t-line code">await auth.<span class="fn">validateToken</span>(jwt);</div>
-          <div class="t-line code">```</div>
-          <div class="t-line"><br/></div>
-          <div class="t-line comment">## Parameters</div>
-          <div class="t-line">| Name | Type | Description |</div>
+          <div class="t-line code">const result = await processPayment(input)</div>
+          <div class="t-line comment">## Error Cases</div>
+          <div class="t-line">- Invalid currency</div>
+          <div class="t-line">- Gateway timeout</div>
           <div class="t-cursor">▋</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROBLEM SECTION -->
-  <section class="problem" id="how">
-    <div class="section-label">THE PROBLEM</div>
-    <h2>Undocumented tools are<br/><span class="accent">technical debt in disguise.</span></h2>
-    <div class="problem-grid">
-      <div class="problem-card">
-        <div class="problem-icon">😤</div>
-        <h3>Devs skip docs</h3>
-        <p>Writing documentation is tedious. Under deadline, it's always the first thing cut from the sprint.</p>
-      </div>
-      <div class="problem-card">
-        <div class="problem-icon">🕵️</div>
-        <h3>Onboarding takes weeks</h3>
-        <p>New teammates spend days reverse-engineering internal tools because no one documented the "why."</p>
-      </div>
-      <div class="problem-card">
-        <div class="problem-icon">📉</div>
-        <h3>Tribal knowledge dies</h3>
-        <p>When the person who built the thing leaves, the knowledge leaves with them. Every time.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- DEMO SECTION -->
   <section class="demo-section" id="demo">
     <div class="section-label">LIVE DEMO</div>
-    <h2>Paste code. Get docs.</h2>
-    <p class="section-sub">Enter your Anthropic API key (stays in your browser — never sent to our servers), paste some code or describe a tool, and watch the agent work.</p>
+    <h2>Paste code. Generate docs. Ship to GitHub.</h2>
+    <p class="section-sub">Use your Anthropic API key locally in the browser to generate practical README and API docs.</p>
 
     <div class="demo-container">
-      <!-- INPUT PANEL -->
       <div class="panel input-panel">
-        <div class="panel-header">
-          <span class="panel-title">📥 Input</span>
-        </div>
+        <div class="panel-header"><span class="panel-title">Input</span></div>
 
         <div class="field-group">
-          <label for="apikey">Anthropic API Key <span class="subtle">(stored locally only)</span></label>
+          <label for="apikey">Anthropic API Key <span class="subtle">(stored in your browser)</span></label>
           <input type="password" id="apikey" placeholder="sk-ant-..." autocomplete="off"/>
         </div>
 
         <div class="field-group">
-          <label>What are you documenting?</label>
+          <label>Documentation target</label>
           <div class="doc-type-tabs">
             <button class="tab active" data-type="code">Code / Function</button>
             <button class="tab" data-type="tool">Internal Tool</button>
@@ -120,13 +85,8 @@
         </div>
 
         <div class="field-group">
-          <label for="input-content">Paste your code or describe your tool</label>
-          <textarea id="input-content" rows="12" placeholder="// Paste your function, class, or describe your internal tool here...
-// Example:
-function processPayment(amount, currency, userId) {
-  // Validates payment, calls Stripe, logs to audit trail
-  // Returns { success, transactionId, timestamp }
-}"></textarea>
+          <label for="input-content">Paste code or describe your tool</label>
+          <textarea id="input-content" rows="12" placeholder="function processPayment(amount, currency, userId) {\n  // validate input\n  // call provider\n  // return { success, transactionId }\n}"></textarea>
         </div>
 
         <div class="field-group">
@@ -134,139 +94,66 @@ function processPayment(amount, currency, userId) {
           <div class="checkbox-group">
             <label class="check-item"><input type="checkbox" checked id="out-readme"> README.md</label>
             <label class="check-item"><input type="checkbox" checked id="out-api"> API Reference</label>
-            <label class="check-item"><input type="checkbox" id="out-pitch"> Flash Pitch Slide</label>
-            <label class="check-item"><input type="checkbox" id="out-onboard"> Onboarding Guide</label>
           </div>
         </div>
 
         <button class="btn-generate" id="generateBtn" onclick="generateDocs()">
-          <span class="btn-text">✨ Generate Documentation</span>
-          <span class="btn-loading" style="display:none">⚙️ Agent Working...</span>
+          <span class="btn-text">Generate Documentation</span>
+          <span class="btn-loading" style="display:none">Generating...</span>
         </button>
       </div>
 
-      <!-- OUTPUT PANEL -->
       <div class="panel output-panel">
         <div class="panel-header">
-          <span class="panel-title">📤 Output</span>
+          <span class="panel-title">Output</span>
           <div class="output-actions">
-            <button class="icon-btn" id="copyBtn" onclick="copyOutput()" title="Copy to clipboard">📋</button>
-            <button class="icon-btn" id="downloadBtn" onclick="downloadOutput()" title="Download .md">⬇️</button>
+            <button class="icon-btn" id="copyBtn" onclick="copyOutput()" title="Copy to clipboard">Copy</button>
+            <button class="icon-btn" id="downloadBtn" onclick="downloadOutput()" title="Download .md">Download</button>
           </div>
         </div>
         <div class="output-tabs" id="outputTabs" style="display:none">
           <button class="out-tab active" data-section="all">All</button>
           <button class="out-tab" data-section="readme">README</button>
-          <button class="out-tab" data-section="api">API Ref</button>
+          <button class="out-tab" data-section="api">API</button>
         </div>
         <div class="output-content" id="outputContent">
           <div class="output-placeholder">
             <div class="placeholder-icon">📝</div>
-            <p>Your generated documentation will appear here.</p>
-            <p class="subtle">Paste some code and hit Generate to see the magic.</p>
+            <p>Your generated documentation appears here.</p>
           </div>
         </div>
         <div class="agent-log" id="agentLog" style="display:none">
-          <div class="log-header">🤖 Agent Reasoning</div>
+          <div class="log-header">Agent status</div>
           <div class="log-content" id="logContent"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
-  <section class="how-section">
-    <div class="section-label">UNDER THE HOOD</div>
-    <h2>An agent that thinks before it writes.</h2>
+  <section class="how-section" id="how">
+    <div class="section-label">HOW IT WORKS</div>
+    <h2>A focused workflow for documentation.</h2>
     <div class="steps">
-      <div class="step">
-        <div class="step-num">01</div>
-        <div class="step-body">
-          <h3>Analyze</h3>
-          <p>The agent first identifies the code's purpose, inputs, outputs, edge cases, and likely audience.</p>
-        </div>
-      </div>
+      <div class="step"><div class="step-num">01</div><div class="step-body"><h3>Analyze</h3><p>Understands purpose, inputs, outputs, and edge cases.</p></div></div>
       <div class="step-arrow">→</div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <div class="step-body">
-          <h3>Structure</h3>
-          <p>It plans the documentation sections based on complexity — no boilerplate, every section earns its place.</p>
-        </div>
-      </div>
+      <div class="step"><div class="step-num">02</div><div class="step-body"><h3>Structure</h3><p>Builds clean sections for README and API docs.</p></div></div>
       <div class="step-arrow">→</div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <div class="step-body">
-          <h3>Write</h3>
-          <p>Generates human-quality markdown with examples, parameter tables, gotchas, and usage patterns.</p>
-        </div>
-      </div>
-      <div class="step-arrow">→</div>
-      <div class="step">
-        <div class="step-num">04</div>
-        <div class="step-body">
-          <h3>Export</h3>
-          <p>Download your .md files, copy to clipboard, or drop straight into your GitHub repo.</p>
-        </div>
-      </div>
+      <div class="step"><div class="step-num">03</div><div class="step-body"><h3>Generate</h3><p>Returns practical markdown ready for GitHub.</p></div></div>
     </div>
   </section>
 
-  <!-- WHAT'S NEXT -->
-  <section class="next-section">
-    <div class="section-label">WHAT'S NEXT</div>
-    <h2>The roadmap is ambitious.</h2>
-    <div class="next-grid">
-      <div class="next-card near">
-        <div class="next-tag">Near Term</div>
-        <ul>
-          <li>🔌 GitHub Action — auto-generate docs on push</li>
-          <li>🗂️ Multi-file project scanning</li>
-          <li>💬 Slack bot integration</li>
-        </ul>
-      </div>
-      <div class="next-card mid">
-        <div class="next-tag">Mid Term</div>
-        <ul>
-          <li>🧠 Doc drift detection (docs vs code diff)</li>
-          <li>🎨 VS Code extension</li>
-          <li>🌐 Team knowledge graph</li>
-        </ul>
-      </div>
-      <div class="next-card far">
-        <div class="next-tag">Vision</div>
-        <ul>
-          <li>🏢 Enterprise self-hosted version</li>
-          <li>🔄 Living docs that update with your codebase</li>
-          <li>📊 Org-wide documentation health dashboard</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- PITCH SLIDE MODAL -->
-  <div class="modal" id="pitchModal" style="display:none">
-    <div class="modal-overlay" onclick="closePitch()"></div>
-    <div class="modal-box">
-      <button class="modal-close" onclick="closePitch()">✕</button>
-      <div id="pitchContent"></div>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
       <div class="logo">Prompt<span>Doc</span></div>
-      <p>Built at the DFW AI Builders Hackathon. Zero backend. 100% open source.</p>
+      <p>Built for fast product demos and real developer workflows.</p>
       <div class="footer-links">
         <a href="https://github.com/YOUR_USERNAME/promptdoc">GitHub</a>
-        <a href="https://github.com/YOUR_USERNAME/promptdoc/blob/main/README.md">Docs</a>
+        <a href="https://github.com/YOUR_USERNAME/promptdoc/blob/main/README.md">README</a>
         <a href="https://github.com/YOUR_USERNAME/promptdoc/issues">Issues</a>
       </div>
     </div>
   </footer>
 
-  <script src="js/app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
