@@ -4,14 +4,14 @@
    ============================================ */
 
 :root {
-  --bg: #0a0a0f;
-  --surface: #111118;
-  --surface2: #1a1a25;
-  --border: #2a2a3a;
-  --accent: #00e5a0;
-  --accent2: #7b5ea7;
+  --bg: #0b1220;
+  --surface: #111827;
+  --surface2: #1f2937;
+  --border: #334155;
+  --accent: #3b82f6;
+  --accent2: #22d3ee;
   --text: #e8e8f0;
-  --muted: #6b6b80;
+  --muted: #94a3b8;
   --warn: #ff6b35;
   --font-display: 'Syne', sans-serif;
   --font-mono: 'DM Mono', monospace;
@@ -99,8 +99,8 @@ nav {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(0,229,160,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,229,160,0.04) 1px, transparent 1px);
+    linear-gradient(rgba(59,130,246,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,0.08) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 .blob {
@@ -125,8 +125,8 @@ nav {
 
 .badge {
   display: inline-block;
-  background: rgba(0,229,160,0.1);
-  border: 1px solid rgba(0,229,160,0.3);
+  background: rgba(59,130,246,0.12);
+  border: 1px solid rgba(59,130,246,0.35);
   color: var(--accent);
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -213,7 +213,7 @@ h1 {
   border: 1px solid var(--border);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  box-shadow: 0 30px 80px rgba(2,6,23,0.65);
   animation: float 4s ease-in-out infinite;
 }
 @keyframes float {
@@ -408,7 +408,7 @@ input::placeholder, textarea::placeholder { color: var(--muted); }
   transition: all 0.2s;
 }
 .tab.active, .tab:hover {
-  background: rgba(0,229,160,0.1);
+  background: rgba(59,130,246,0.12);
   border-color: var(--accent);
   color: var(--accent);
 }
